@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng.Chú ý: Sử dụng vòng lặp for lồng nhau
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let i in a) {
+            console.log("row" + i);
+
+            for (var j in a[i]) {
+                console.log(" " + a[i][j]);
+            }
+        }
+        //Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược. Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"
+        const arr1 = ['c', 's', 'c', 2, 6, 1];
+        console.log(arr1.reverse().join(" "));
+        //  Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.Chương trình này đếm số ký tự số trong mảng.
+        const arr2 = ['c', 's', 'c', 2, 6, 1];
+        let count = 0;
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr1[i] >= '0' && arr1[i] <= '9') {
+                count++;
+            }
+        } console.log(count);
+        //Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+        let arr3 = "Khanh dep trai khoai to";
+        arr3 = arr3.split(" ").length;
+        console.log(arr3);
+        // Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+        const arr4 = [1, 2, 3, 4];
+        const arr5 = [1, 2, 3];
+
+        if (arr4.length !== arr5.length) {
+            console.log("Hai chuỗi này khác nhau");
+        } else {
+            let equals = true;
+            for (let i = 0; i < arr4.length; i++) {
+                if (arr4[i] !== arr5[i]) {
+                    equals = false;
+                    break;
+                }
+                if (equals) {
+                    console.log("Hai chuỗi này giống nhau");
+                } else {
+                    console.log("Hai chuỗi này khác nhau");
+
+                }
+            }
+        }
+        //Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+        const arr6 = ['a', '-', 'c', '-', 1, 2];
+        for (let i = 0; i < arr6.length; i++) {
+            if (arr6[i] === '-') {
+                arr6[i] = '_';
+            }
+        } console.log(arr6);
+    </script>
+</body>
+
+</html>
